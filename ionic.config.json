@@ -1,5 +1,8 @@
 {
   "name": "quale",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "5f93050e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
