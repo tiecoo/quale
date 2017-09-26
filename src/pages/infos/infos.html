@@ -20,7 +20,7 @@
       <p style="text-align: center; color: purple">Abaixo listamos alguns estabelecimentos na sua região</p>
     <ion-card *ngFor='let est of estabelecimentos'>
       <ion-list>
-        <ion-item>
+        <ion-item (click)='gotoinfo()'>
           <h2 style="font-weight: bolder;">{{est.name}}</h2>
           <p>{{est.descricao}}</p>
           <p style="color: green;">Aberto agora</p>

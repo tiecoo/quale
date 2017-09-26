@@ -8,6 +8,7 @@ import firebase from 'firebase';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
+import { RestaurantsPage } from '../pages/restaurants/restaurants';
 
 import { Facebook } from '@ionic-native/facebook'
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -21,12 +22,13 @@ firebase.initializeApp({
   projectId: "qualaboa-68e64",
   storageBucket: "qualaboa-68e64.appspot.com",
   messagingSenderId: "973493219172"
-    });
+});
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    InfosPage
+    InfosPage,
+    RestaurantsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ firebase.initializeApp({
   entryComponents: [
     MyApp,
     HomePage,
-    InfosPage
+    InfosPage,
+    RestaurantsPage
   ],
   providers: [
     StatusBar,

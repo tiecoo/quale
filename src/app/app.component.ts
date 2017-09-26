@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
+import { RestaurantsPage } from '../pages/restaurants/restaurants';
 @Component({
   templateUrl: 'app.html'
 })

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { QualsProvider } from '../../providers/qual.service';
+import { RestaurantsPage } from '../restaurants/restaurants';
 
 /**
  * Generated class for the InfosPage page.
@@ -10,7 +11,6 @@ import { QualsProvider } from '../../providers/qual.service';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-infos',
   templateUrl: 'infos.html',
@@ -40,6 +40,9 @@ export class InfosPage {
         console.log(error);
       });
     console.log('ionViewDidLoad InfosPage');
+  }
+  gotoinfo(){
+    this.navCtrl.setRoot(RestaurantsPage);
   }
 
 }
