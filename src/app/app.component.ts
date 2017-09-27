@@ -12,7 +12,7 @@ import { RestaurantsPage } from '../pages/restaurants/restaurants';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = InfosPage;
+  rootPage:any = HomePage;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{title: string, component: any}>;
   user: any;
