@@ -21,5 +21,18 @@ page-restaurants {
     width: 100%;
     color: #fff;
   }
+  .segment-md .segment-button.segment-activated {
+    border-color: purple;
+    opacity: 1;
+}
+
+// ion-segment-button.segment-button {
+// display: inline-block!important;
+// min-width: 100px!important;
+// width: auto!important;
+// }
+// ion-segment-button{
+//   height: 76px;
+// }
 
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Facebook } from '@ionic-native/facebook';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { InfosPage } from '../infos/infos';
 
@@ -12,7 +12,7 @@ import firebase from 'firebase';
 })
 export class HomePage {
   userProfile: any = null;
-  constructor(public navCtrl: NavController, private facebook: Facebook, public nativeStorage: NativeStorage) {}
+  constructor(public navCtrl: NavController, private facebook: Facebook, public nativeStorage: NativeStorage, private alertCtrl: AlertController) {}
 
   facebookLogin(): void {
     let nav = this.navCtrl;
@@ -25,7 +25,7 @@ export class HomePage {
           console.log("Firebase success: " + JSON.stringify(success));
           this.nativeStorage.setItem('user',
           {
-            
+
             name: success.displayName,
             email: success.email,
             picture: success.photoURL

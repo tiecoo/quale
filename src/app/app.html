@@ -1,17 +1,43 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
+<ion-menu [content]="content" >
+  <ion-header style="background-color: purple;">
+    <ion-toolbar style="background-color: purple;">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngIf= "userReady == true">
+  <ion-content style="background-color: purple; border: 0px;">
+    <ion-card>
+      <img src="http://www.chaplinmarilia.com.br/wp-content/uploads/chaplin-marilia-bar-gatronoma-feijoada-02.jpg" style=" -webkit-filter: blur(5px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);"/>
+      <!-- <div class="card-title">São Paulo</div> -->
+      <div class="card-title">
+        <img src="https://avatars2.githubusercontent.com/u/5972853?v=4&s=460" style=" width: 30%;border-radius: 25px;margin-bottom: -23px; margin-top: 40px;"/>
+        <div style="margin-left: 70px;font-size: 19px;">Diego Pereira</div>
+      </div>
+    </ion-card>
+
+    <ion-list style="background-color: purple; border-top: 0px;">
+      <button menuClose ion-item *ngIf= "userReady == true" style="background-color: purple; color: white;">
         {{user.name}}
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+        <ion-icon name="heart"></ion-icon>
+Favoritos
+      </button>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+        <ion-icon name="map"></ion-icon>
+Estabelecimentos
+      </button>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+        <ion-icon name="medal"></ion-icon>
+Meus pontos
+      </button>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+        <ion-icon name="qr-scanner"></ion-icon>
+Check-in
       </button>
     </ion-list>
   </ion-content>
