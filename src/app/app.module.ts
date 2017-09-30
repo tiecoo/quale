@@ -17,6 +17,7 @@ import { Facebook } from '@ionic-native/facebook'
 import { NativeStorage } from '@ionic-native/native-storage';
 import { QualsProvider } from '../providers/qual.service';
 import { HttpModule } from '@angular/http';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAABt0w18uKLNH9Oyo9o9ONG7X-Dq59Ej4",
@@ -57,6 +58,7 @@ firebase.initializeApp({
     Facebook,
     NativeStorage,
     QualsProvider,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

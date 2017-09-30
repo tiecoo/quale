@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>scanner</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Check-in</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+    <button ion-button (click)="scan()"><ion-icon name="qr-scanner"></ion-icon> Fazer check-in </button>
+    <div *ngIf="scanData">
+        <p>Scanned Text : </p>
+        <p>Scanned Format : </p>
 
+    </div>
 </ion-content>

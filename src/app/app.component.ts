@@ -17,7 +17,7 @@ import { ScannerPage } from '../pages/scanner/scanner';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ScannerPage;
+  rootPage:any = HomePage;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{title: string, component: any}>;
   user: any;
