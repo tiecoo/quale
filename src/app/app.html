@@ -23,21 +23,25 @@
       <button menuClose ion-item *ngIf= "userReady == true" style="background-color: purple; color: white;">
         {{user.name}}
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="lala(1)" style="background-color: purple; color: white;">
         <ion-icon name="heart"></ion-icon>
 Favoritos
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="lala(2)" style="background-color: purple; color: white;">
         <ion-icon name="map"></ion-icon>
 Estabelecimentos
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="lala(3)" style="background-color: purple; color: white;">
         <ion-icon name="medal"></ion-icon>
 Meus pontos
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" style="background-color: purple; color: white;">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="lala(4)" style="background-color: purple; color: white;">
         <ion-icon name="qr-scanner"></ion-icon>
 Check-in
+      </button>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="lala(5)" style="background-color: purple; color: white;">
+        <ion-icon name="lock"></ion-icon>
+Sair
       </button>
     </ion-list>
   </ion-content>

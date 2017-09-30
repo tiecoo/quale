@@ -10,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { PointsPage } from '../pages/points/points';
+import { ScannerPage } from '../pages/scanner/scanner';
 
 import { Facebook } from '@ionic-native/facebook'
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -30,7 +32,9 @@ firebase.initializeApp({
     HomePage,
     InfosPage,
     RestaurantsPage,
-    FavoritesPage
+    FavoritesPage,
+    PointsPage,
+    ScannerPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ firebase.initializeApp({
     HomePage,
     InfosPage,
     RestaurantsPage,
-    FavoritesPage
+    FavoritesPage,
+    PointsPage,
+    ScannerPage
   ],
   providers: [
     StatusBar,

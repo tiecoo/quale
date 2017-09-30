@@ -10,12 +10,14 @@ import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { PointsPage } from '../pages/points/points';
+import { ScannerPage } from '../pages/scanner/scanner';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = FavoritesPage;
+  rootPage:any = ScannerPage;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{title: string, component: any}>;
   user: any;
@@ -75,5 +77,19 @@ export class MyApp {
   //     pushObject.on('error').subscribe(error => alert('Error with Push plugin' + error));
   //     }
 
+  }
+  lala(page){
+    if(page == 1){
+      this.nav.setRoot(FavoritesPage);
+    } else if(page == 2){
+      this.nav.setRoot(InfosPage);
+    } else if(page == 3){
+      this.nav.setRoot(PointsPage);
+    } else if (page == 4){
+      this.nav.setRoot(ScannerPage);
+    } else if (page == 5){
+      this.nav.setRoot(HomePage);
+    }
+    
   }
 }
