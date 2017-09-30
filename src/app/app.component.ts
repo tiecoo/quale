@@ -9,11 +9,13 @@ import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
+import { FavoritesPage } from '../pages/favorites/favorites';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = FavoritesPage;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{title: string, component: any}>;
   user: any;

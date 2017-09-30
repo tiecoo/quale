@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InfosPage } from '../pages/infos/infos';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
+import { FavoritesPage } from '../pages/favorites/favorites';
 
 import { Facebook } from '@ionic-native/facebook'
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -28,7 +29,8 @@ firebase.initializeApp({
     MyApp,
     HomePage,
     InfosPage,
-    RestaurantsPage
+    RestaurantsPage,
+    FavoritesPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ firebase.initializeApp({
     MyApp,
     HomePage,
     InfosPage,
-    RestaurantsPage
+    RestaurantsPage,
+    FavoritesPage
   ],
   providers: [
     StatusBar,
