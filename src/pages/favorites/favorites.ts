@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RestaurantsPage } from '../restaurants/restaurants';
 
 /**
  * Generated class for the FavoritesPage page.
@@ -19,6 +20,10 @@ export class FavoritesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavoritesPage');
+  }
+
+  openpage(){
+    this.navCtrl.setRoot(RestaurantsPage);
   }
 
 }

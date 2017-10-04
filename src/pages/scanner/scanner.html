@@ -16,10 +16,23 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button (click)="scan()"><ion-icon name="qr-scanner"></ion-icon> Fazer check-in </button>
-    <div *ngIf="scanData">
-        <p>Scanned Text : </p>
-        <p>Scanned Format : </p>
-
-    </div>
+  <!-- <ion-item>
+    <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
+    </ion-input>
+  </ion-item> -->
+  <!-- <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button> -->
+  <button ion-button full icon-left (click)="scanCode()" color="secondary" style="background-color: purple;"><ion-icon name="qr-scanner"></ion-icon> Check-in</button>
+ 
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p>Value: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
+ 
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content>
+      Parabéns, mais um ponto adicionado ao Chaplin, se divirta!
+    </ion-card-content>
+  </ion-card>
 </ion-content>

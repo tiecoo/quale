@@ -17,8 +17,9 @@ import { Facebook } from '@ionic-native/facebook'
 import { NativeStorage } from '@ionic-native/native-storage';
 import { QualsProvider } from '../providers/qual.service';
 import { HttpModule } from '@angular/http';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 firebase.initializeApp({
   apiKey: "AIzaSyAABt0w18uKLNH9Oyo9o9ONG7X-Dq59Ej4",
   authDomain: "qualaboa-68e64.firebaseapp.com",
@@ -40,7 +41,8 @@ firebase.initializeApp({
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

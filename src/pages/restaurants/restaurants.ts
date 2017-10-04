@@ -26,8 +26,15 @@ export class RestaurantsPage {
         subTitle: 'Avalie o estabelecimento de 0-10',
         inputs: [
           {
-            placeholder: '0-10'
-          }
+            name: 'Nota',
+            // placeholder: '0-10',
+            type: 'range',
+            max: 10,
+            min: 0
+          },
+          {
+            placeholder: 'Comentário'
+          },
         ],
         buttons: ['Avaliar']
       });
@@ -37,6 +44,15 @@ export class RestaurantsPage {
     let alert = this.alertCtrl.create({
         title: 'Favorito',
         subTitle: 'estabelecimento foi adicionado a sua lista de favoritos',
+        buttons: ['Fechar']
+      });
+    alert.present();
+  }
+
+  trocar() {
+    let alert = this.alertCtrl.create({
+        title: 'Trocando pontos',
+        subTitle: 'Seu código promocional é : CD4321AB, se divirta!',
         buttons: ['Fechar']
       });
     alert.present();
